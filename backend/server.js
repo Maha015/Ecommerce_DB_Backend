@@ -29,6 +29,7 @@ import Wishlist from './models/Wishlist.js';
 // Import middleware
 import { authenticateToken } from './middleware/auth.js';
 import errorHandler from "./middleware/errorHandler.js";
+import corsMiddleware from "./middleware/cors.js";
 
 dotenv.config();
 connectDB();
@@ -393,6 +394,8 @@ app.use('/api/users', authenticateToken, userRoutes);
 app.use('/api/agents', authenticateToken, agentRoutes);
 
 app.use('/api/razorpay', authenticateToken, razorpayRoutes);
+
+app.use(corsMiddleware);
 
 
 // ========================================
