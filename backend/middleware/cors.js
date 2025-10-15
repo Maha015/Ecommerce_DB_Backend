@@ -5,12 +5,14 @@ const corsOptions = {
     // Allow requests with no origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
     
-    const allowedOrigins = [
+const allowedOrigins = [
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   process.env.FRONTEND_URL, // optional, for dynamic config
-  'https://timely-syrniki-b29a71.netlify.app' // Add your Netlify URL here
+  'https://timely-syrniki-b29a71.netlify.app', // Netlify
+  'https://ecommerce-db-backend-k1e0wydyd-maha-ss-projects.vercel.app' // Vercel frontend
 ];
+
 
     
     if (allowedOrigins.includes(origin)) {
