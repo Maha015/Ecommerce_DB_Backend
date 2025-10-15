@@ -10,7 +10,7 @@ const allowedOrigins = [
   'http://127.0.0.1:3000',
   process.env.FRONTEND_URL, // optional, for dynamic config
   'https://timely-syrniki-b29a71.netlify.app', // Netlify
-  'https://ecommerce-db-backend-k1e0wydyd-maha-ss-projects.vercel.app' // Vercel frontend
+  'https://ecommerce-db-backend-maha-ss-projects.vercel.app'// Vercel frontend
 ];
 
 
