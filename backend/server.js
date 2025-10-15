@@ -39,12 +39,11 @@ const app = express();
 // ========================================
 // MIDDLEWARE
 // ========================================
-// IMPORTANT: JSON parser must come BEFORE CORS
+// CORS must be first to handle preflight requests
+app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
-// Use CORS middleware with all allowed origins
-app.use(corsMiddleware);
 
 // ========================================
 // PUBLIC ROUTES (No authentication required)
