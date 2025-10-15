@@ -39,7 +39,11 @@ const app = express();
 // ========================================
 // MIDDLEWARE
 // ========================================
-// Use the cors middleware (it's already imported at line 32)
+// IMPORTANT: JSON parser must come BEFORE CORS
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan("dev"));
+// Use CORS middleware with all allowed origins
 app.use(corsMiddleware);
 
 // ========================================
@@ -388,6 +392,7 @@ app.use('/api/users', authenticateToken, userRoutes);
 app.use('/api/agents', authenticateToken, agentRoutes);
 
 app.use('/api/razorpay', authenticateToken, razorpayRoutes);
+
 
 
 
