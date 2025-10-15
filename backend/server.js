@@ -39,7 +39,7 @@ const app = express();
 // MIDDLEWARE
 // ========================================
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin:  'https://ecommerce-db-backend.vercel.app',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
