@@ -39,14 +39,8 @@ const app = express();
 // ========================================
 // MIDDLEWARE
 // ========================================
-app.use(cors({
-  origin:  'https://ecommerce-db-backend.vercel.app',
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-app.use(express.json());
-app.use(morgan("dev"));
+// Use the cors middleware (it's already imported at line 32)
+app.use(corsMiddleware);
 
 // ========================================
 // PUBLIC ROUTES (No authentication required)
@@ -395,7 +389,6 @@ app.use('/api/agents', authenticateToken, agentRoutes);
 
 app.use('/api/razorpay', authenticateToken, razorpayRoutes);
 
-app.use(corsMiddleware);
 
 
 // ========================================
