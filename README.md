@@ -25,7 +25,7 @@ The project connects **Admin**, **Customer**, and **Delivery Agent** dashboards 
 - **Database:** MongoDB (Mongoose)  
 - **Payment Gateway:** Razorpay (Test Mode)  
 - **Tools:** Git, VS Code, Postman  
-- **Deployment:** Vercel / Netlify (frontend), Node.js server (backend)
+- **Deployment:** Vercel (frontend), Node.js server (backend)
 
 ---
 
@@ -36,5 +36,6 @@ The project connects **Admin**, **Customer**, and **Delivery Agent** dashboards 
 | Admin           | admin@delivery.com  | admin123   |
 | Delivery Agent  | agent1@delivery.com | agent123   |
 | Customer        | Sign up via website | N/A        |
+
 
 
