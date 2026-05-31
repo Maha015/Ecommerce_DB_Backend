@@ -7,7 +7,8 @@ const allowedOrigins = [
   'https://ecommerce-db-backend-maha-ss-projects.vercel.app',
   'https://ecommerce-db-backend-git-main-maha-ss-projects.vercel.app',
   'https://ecommerce-db-backend-5tuyg00wk-maha-ss-projects.vercel.app',
-  'https://ecommerce-db-backend-cdsw.vercel.app'
+  'https://ecommerce-db-backend-cdsw.vercel.app',
+  'https://ecommerce-db-backend-new.vercel.app'
 ];
 
 // Add environment variable origins if present
